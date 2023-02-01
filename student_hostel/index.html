@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>  
+<head>
+    <meta charset="utf-8">  
+    <title> login</title>  
+    <link rel="stylesheet" type="text/css" href="style.css">   
+    <!-- <link rel="stylesheet" type="text/css" href="responsive.css">    -->
+    <script src="https://kit.fontawesome.com/641337ab9c.js" crossorigin="anonymous"></script>
+</head>  
+<body> 
+     
+    <div class="container"> 
+        <div id = "frm"> 
+             <center><img id="logo" src="logo.png" width="90%" alt="logo"></center>
+             <center><strong><p class="wel">WELCOME TO GHS PORTAL</p></strong></center>
+             <center><h1 class="sign">Sign In</h1></center>
+            <form  class="float-label" name="f1" action = "authentication.php" onsubmit = "return validation()" method = "POST">  
+                <div class="input">  
+                    <input type = "text" id ="user" required name  = "user" placeholder=""/> 
+                    <label for="user"> Registration Number </label> <br> 
+                    <!-- <span class="lighting"></span>  -->
+                </div>  
+                <div class="input">  
+                    <input type = "password" id ="pass" class="pass" required name  = "pass" placeholder=""/> 
+                    <label for="pass"> Password </label>
+                    <!-- <span class="lighting"></span> -->
+                    <span onclick="hideUnhide()" id="hideUnhide">
+                        <i class="fa-regular fa-eye" id="eye"></i>
+                    </span>
+                 </div>  
+                <p>     
+                    <button type =  "submit" id = "btn" value = "Login"  > 
+                        LOGIN
+                    <i class="fa-solid fa-arrow-right"></i> 
+                    </button>
+                </p>  
+            </form>  
+        </div> 
+        <div id="frm2">
+            <video src="GHS.mp4" style="object-fit:fill;"></video>
+        </div>
+    </div>
+     
+        <!-- <footer>
+            "©2017 Manipal University, jaipur.manipal.edu, Dehmi Kalan,
+             Near GVK Toll Plaza, Jaipur-Ajmer Expressway, Jaipur, Rajasthan
+             303007."
+        </footer> -->
+    <script>  
+            function validation()  
+            {  
+                var id=document.f1.user.value;  
+                var ps=document.f1.pass.value;  
+                if(id.length=="" && ps.length=="") {  
+                    alert("User Name and Password fields are empty");  
+                    return false;  
+                }  
+                else  
+                {  
+                    if(id.length=="") {  
+                        alert("User Name is empty");  
+                        return false;  
+                    }   
+                    if (ps.length=="") {  
+                    alert("Password field is empty");  
+                    return false;  
+                    }  
+                }                             
+            }  
+            
+            function hideUnhide() {
+                var y = document.getElementById("eye");
+                var x = document.getElementById("pass");
+                if (x.type === "password") {
+                    x.type = "text";
+                    y.classList.remove("fa-eye");
+                    y.classList.add("fa-eye-slash")
+                }
+                else{
+                    x.type ="password";
+                    y.classList.remove("fa-eye-slash");
+                    y.classList.add("fa-eye");
+                }
+            }
+
+            // function function2(){
+            //     var m = document.getElementById("user");
+            //     m.value="";
+            // }
+             
+//             function show() {
+//                 const pass_field = document.querySelector(".pass");
+// const showBtn = document.querySelector(".show");
+// showBtn.addEventListener("click", function () {
+//   if (pass_field.type === "password") {
+//     pass_field.type = "text";
+//     showBtn.classList.remove("fa-solid fa-eye");
+//     showBtn.classList.add("fa-solid fa-eye-slash");
+//     // showBtn.textContent = "HIDE";
+//     // showBtn.style.color = "#D052F6";
+//   } else {
+//     pass_field.type = "password";
+//     showBtn.textContent = "SHOW";
+//     showBtn.classList.remove("fa-solid fa-eye-slash");
+//     showBtn.classList.add("fa-solid fa-eye");
+//     // showBtn.style.color = "#222";
+//   }<i class="fa-regular fa-eye-slash"></i>
+// });
+//             }
+// $(document).on('click', '.toggle-password', function () {
+
+// $(this).toggleClass("fa-regular fa-eye-slash");
+
+// var input = $("#pass");
+// input.attr('type') === 'password' ? input.attr('type', 'text') : input.attr('type', 'password')
+// });
+        </script> 
+        <script></script> 
+</body>     
+</html

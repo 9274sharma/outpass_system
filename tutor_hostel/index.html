@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>  
+<head>
+    <meta charset="utf-8">  
+    <title>login page</title>  
+    
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://kit.fontawesome.com/641337ab9c.js" crossorigin="anonymous"></script>
+   
+</head>  
+<body>  
+
+    <div class="container"> 
+    <div id = "frm">  
+        <center><img id="logo" src="logo.png" width="90%" alt="logo"></center>
+        <center><strong><p class="wel">WELCOME TO GHS PORTAL</p></strong></center>
+        <center><h1 class="sign">Warden Sign In</h1></center>
+        <!-- <h1>Warden login</h1>   -->
+        <form name="f1" action = "authentication.php" onsubmit = "return validation()" method = "POST">  
+            <p>  
+                <label> UserName: </label>  
+                <input onclick="function1()" type = "text" id ="user" name  = "user" />  
+            </p>  
+            <div class="input-gropu">  
+                <label> Password: </label>  
+                <input onclick="function1()" type = "password" id ="pass" required name  = "pass" />  
+                    <span onclick="hideUnhide()" id="hideUnhide">
+                    <i class="fa-regular fa-eye" id="eye"></i>
+                </span>
+            </div>  
+            <p> 
+                <button type =  "submit" id = "btn" value = "Login"  > 
+                    LOGIN
+                <i class="fa-solid fa-arrow-right"></i> 
+                </button>    
+             </p>  
+        </form>  
+    </div> 
+    <div id="frm2">
+        <video src="GHS.mp4" style="object-fit:fill;"></video>
+    </div> 
+</div>
+      
+    <script>  
+            function validation()  
+            {  
+                var id=document.f1.user.value;  
+                var ps=document.f1.pass.value;  
+                if(id.length=="" && ps.length=="") {  
+                    alert("User Name and Password fields are empty");  
+                    return false;  
+                }  
+                else  
+                {  
+                    if(id.length=="") {  
+                        alert("User Name is empty");  
+                        return false;  
+                    }   
+                    if (ps.length=="") {  
+                    alert("Password field is empty");  
+                    return false;  
+                    }  
+                }                             
+            }  
+
+            function hideUnhide() {
+                var y = document.getElementById("eye");
+                var x = document.getElementById("pass");
+                if (x.type === "password") {
+                    x.type = "text";
+                    y.classList.remove("fa-eye");
+                    y.classList.add("fa-eye-slash")
+                }
+                else{
+                    x.type ="password";
+                    y.classList.remove("fa-eye-slash");
+                    y.classList.add("fa-eye");
+                }
+            }
+
+             
+        </script>  
+</body>     
+</html
