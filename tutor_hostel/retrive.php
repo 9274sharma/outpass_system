@@ -6,7 +6,6 @@ $result = mysqli_query($conn,"SELECT * FROM requestform");
 <html>
  <head>
    <link rel = "stylesheet" type = "text/css" href = "style2.css">   
-   <script src="retrive.js"></script>
  <title> Requests</title>
  </head>
  <?php include('history_header.php') ?>
@@ -36,7 +35,7 @@ while($row = mysqli_fetch_array($result)) {
 <tr>
     <td><?php echo $row["name"]; ?></td>
     <td><?php echo $row["rollno"]; ?></td>
-    <td><?php echo $row["block"]; ?></td>
+    <td><?php echo $row["block"];?></td>
     <td><?php echo $row["roomno"]; ?></td>
     <td><?php echo $row["outpasstype"]; ?></td>
     <td><?php echo $row["outdate"]; ?></td>
@@ -44,8 +43,9 @@ while($row = mysqli_fetch_array($result)) {
     <td><?php echo $row["outtime"]; ?></td>
     <td><?php echo $row["intime"]; ?></td>
     <td><?php echo $row["place"]; ?></td>
-    <?php echo "<td><a href='accept.php?rollno=$row[rollno]'>Accept</a> | <a id='dec' onclick='decl()' href='decline.php?rollno=$row[rollno]'>Decline</a></td></tr>" ?>
- 
+    <?php echo "<td><a href='accept.php?rollno=$row[rollno]'>Accept</a> | <a href='decline.php?rollno=$row[rollno]'>Decline</a></td></tr>" ?>
+
+
 </tr>
 <?php
 $i++;

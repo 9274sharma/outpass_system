@@ -2,7 +2,7 @@
 <html>  
 <head>
     <meta charset="utf-8">  
-    <title> login</title>  
+    <title>Outpass Student Portal</title>  
     <link rel="stylesheet" type="text/css" href="style.css">   
     <!-- <link rel="stylesheet" type="text/css" href="responsive.css">    -->
     <script src="https://kit.fontawesome.com/641337ab9c.js" crossorigin="anonymous"></script>
@@ -16,12 +16,12 @@
              <center><h1 class="sign">Sign In</h1></center>
             <form  class="float-label" name="f1" action = "authentication.php" onsubmit = "return validation()" method = "POST">  
                 <div class="input">  
-                    <input type = "text" id ="user" required name  = "user" placeholder=""/> 
+                    <input type = "text" id ="user" required name  = "user" placeholder="Registration Number"/> 
                     <label for="user"> Registration Number </label> <br> 
                     <!-- <span class="lighting"></span>  -->
                 </div>  
                 <div class="input">  
-                    <input type = "password" id ="pass" class="pass" required name  = "pass" placeholder=""/> 
+                    <input type = "password" id ="pass" class="pass" required name  = "pass" placeholder="Password"/> 
                     <label for="pass"> Password </label>
                     <!-- <span class="lighting"></span> -->
                     <span onclick="hideUnhide()" id="hideUnhide">
@@ -37,7 +37,10 @@
             </form>  
         </div> 
         <div id="frm2">
-            <video src="GHS.mp4" style="object-fit:fill;"></video>
+            <!-- <video controls="play" autoplay src="GHS.mp4" style="object-fit:fill;"></video> -->
+            <video  autoplay loop playsinline muted class="video-container">
+                <source class="video-main" src="./GHS.mp4" type="video/mp4" >
+            </video>
         </div>
     </div>
      
@@ -115,6 +118,6 @@
 // input.attr('type') === 'password' ? input.attr('type', 'text') : input.attr('type', 'password')
 // });
         </script> 
-        <script></script> 
+         
 </body>     
 </html

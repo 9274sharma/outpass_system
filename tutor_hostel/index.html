@@ -2,45 +2,53 @@
 <html>  
 <head>
     <meta charset="utf-8">  
-    <title>login page</title>  
-    
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Outpass Warden Portal</title>  
+    <link rel="stylesheet" type="text/css" href="style.css">   
+    <!-- <link rel="stylesheet" type="text/css" href="responsive.css">    -->
     <script src="https://kit.fontawesome.com/641337ab9c.js" crossorigin="anonymous"></script>
-   
 </head>  
-<body>  
-
+<body> 
+     
     <div class="container"> 
-    <div id = "frm">  
-        <center><img id="logo" src="logo.png" width="90%" alt="logo"></center>
-        <center><strong><p class="wel">WELCOME TO GHS PORTAL</p></strong></center>
-        <center><h1 class="sign">Warden Sign In</h1></center>
-        <!-- <h1>Warden login</h1>   -->
-        <form name="f1" action = "authentication.php" onsubmit = "return validation()" method = "POST">  
-            <p>  
-                <label> UserName: </label>  
-                <input onclick="function1()" type = "text" id ="user" name  = "user" />  
-            </p>  
-            <div class="input-gropu">  
-                <label> Password: </label>  
-                <input onclick="function1()" type = "password" id ="pass" required name  = "pass" />  
+        <div id = "frm"> 
+             <center><img id="logo" src="logo.png" width="90%" alt="logo"></center>
+             <center><strong><p class="wel">WELCOME TO GHS PORTAL</p></strong></center>
+             <center><h1 class="sign">Warden Sign In</h1></center>
+            <form  class="float-label" name="f1" action = "authentication.php" onsubmit = "return validation()" method = "POST">  
+                <div class="input">  
+                    <input type = "text" id ="user" required name  = "user" placeholder="Registration Number"/> 
+                    <label for="user"> Registration Number </label> <br> 
+                    <!-- <span class="lighting"></span>  -->
+                </div>  
+                <div class="input">  
+                    <input type = "password" id ="pass" class="pass" required name  = "pass" placeholder="Password"/> 
+                    <label for="pass"> Password </label>
+                    <!-- <span class="lighting"></span> -->
                     <span onclick="hideUnhide()" id="hideUnhide">
-                    <i class="fa-regular fa-eye" id="eye"></i>
-                </span>
-            </div>  
-            <p> 
-                <button type =  "submit" id = "btn" value = "Login"  > 
-                    LOGIN
-                <i class="fa-solid fa-arrow-right"></i> 
-                </button>    
-             </p>  
-        </form>  
-    </div> 
-    <div id="frm2">
-        <video src="GHS.mp4" style="object-fit:fill;"></video>
-    </div> 
-</div>
-      
+                        <i class="fa-regular fa-eye" id="eye"></i>
+                    </span>
+                 </div>  
+                <p>     
+                    <button type =  "submit" id = "btn" value = "Login"  > 
+                        LOGIN
+                    <i class="fa-solid fa-arrow-right"></i> 
+                    </button>
+                </p>  
+            </form>  
+        </div> 
+        <div id="frm2">
+            <!-- <video controls="play" autoplay src="GHS.mp4" style="object-fit:fill;"></video> -->
+            <video  autoplay loop playsinline muted class="video-container">
+                <source class="video-main" src="./GHS.mp4" type="video/mp4" >
+            </video>
+        </div>
+    </div>
+     
+        <!-- <footer>
+            "©2017 Manipal University, jaipur.manipal.edu, Dehmi Kalan,
+             Near GVK Toll Plaza, Jaipur-Ajmer Expressway, Jaipur, Rajasthan
+             303007."
+        </footer> -->
     <script>  
             function validation()  
             {  
@@ -62,7 +70,7 @@
                     }  
                 }                             
             }  
-
+            
             function hideUnhide() {
                 var y = document.getElementById("eye");
                 var x = document.getElementById("pass");
@@ -78,7 +86,38 @@
                 }
             }
 
+            // function function2(){
+            //     var m = document.getElementById("user");
+            //     m.value="";
+            // }
              
-        </script>  
+//             function show() {
+//                 const pass_field = document.querySelector(".pass");
+// const showBtn = document.querySelector(".show");
+// showBtn.addEventListener("click", function () {
+//   if (pass_field.type === "password") {
+//     pass_field.type = "text";
+//     showBtn.classList.remove("fa-solid fa-eye");
+//     showBtn.classList.add("fa-solid fa-eye-slash");
+//     // showBtn.textContent = "HIDE";
+//     // showBtn.style.color = "#D052F6";
+//   } else {
+//     pass_field.type = "password";
+//     showBtn.textContent = "SHOW";
+//     showBtn.classList.remove("fa-solid fa-eye-slash");
+//     showBtn.classList.add("fa-solid fa-eye");
+//     // showBtn.style.color = "#222";
+//   }<i class="fa-regular fa-eye-slash"></i>
+// });
+//             }
+// $(document).on('click', '.toggle-password', function () {
+
+// $(this).toggleClass("fa-regular fa-eye-slash");
+
+// var input = $("#pass");
+// input.attr('type') === 'password' ? input.attr('type', 'text') : input.attr('type', 'password')
+// });
+        </script> 
+         
 </body>     
 </html

@@ -1,37 +1,3 @@
-/* body{   
-    background: #eee;  
-}  
-#frm{  
-    border: solid gray 1px;  
-    width:25%;  
-    border-radius: 2px;  
-    margin: 120px auto;  
-    background: white;  
-    padding: 50px;  
-}  
-#btn{  
-    color: #fff;  
-    background: #337ab7;  
-    padding: 7px;  
-    margin-left: 70%;  
-}
-table {
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-}
-
-td, th {
-    border: 1px solid #dddddd;
-    text-align: left;
-    padding: 8px;
-
-}
-
-tr:nth-child(even) {
-    background-color: white;
-} */
-
 body {
   background: #eeeeee;
   margin: 0px;
@@ -90,6 +56,68 @@ header {
   flex-direction: column;
 }
 
+form legend {
+  font-size: 2em;
+  margin-bottom: 1em;
+  width: 100%;
+  border-bottom: 2px solid #ddd;
+}
+
+.float-label .input {
+  float: left;
+  position: relative;
+  width: 100%;
+  /* border-bottom: 1px solid #ddd; */
+  padding-top: 23px;
+  padding-bottom: 10px;
+}
+
+.float-label .input.small {
+  width: 30%;
+  border-right: 1px solid #ddd;
+}
+
+.float-label .input.medium {
+  width: 70%;
+  padding-left: 10px;
+}
+
+.float-label .input:last-child {
+  border: 0;
+}
+
+.float-label input,
+.float-label textarea {
+  /* display: block; */
+  width: 100%;
+  border: 0;
+  outline: 0;
+  resize: none;
+}
+
+.float-label input + label,
+.float-label textarea + label {
+  position: absolute;
+  top: 10px;
+  transition: top 0.7s ease, opacity 0.7s ease;
+  opacity: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #ed9d08;
+  letter-spacing: 0.05ch;
+  font-family: helvetica;
+}
+
+.float-label input:valid + label,
+.float-label textarea:valid + label {
+  opacity: 1;
+  top: -7px;
+}
+
+.float-label input:focus + label,
+.float-label textarea:focus + label {
+  color: #ed9d08;
+}
 #logo {
   padding: 4%;
   margin: 0%;
@@ -110,28 +138,31 @@ header {
 }
 
 label {
-  margin: 4%;
+  margin: 2%;
   padding: 2%;
   text-decoration: underline;
   font-size: 20px;
   font-weight: bold;
+  display: flex;
 }
 #user {
-  margin: 10px 10px 10px 25px;
-  width: 70%;
-  height: 30px;
+  margin: 10px 10px 10px 10px;
+  width: 80%;
+  height: 38px;
   background-color: rgba(248, 163, 78, 0.785);
   border-radius: 5px;
   border-style: none;
+  font-size: 12px;
 }
 
 #pass {
-  margin: 10px 10px 10px 25px;
-  width: 70%;
-  height: 30px;
+  margin: 10px 10px 10px 10px;
+  width: 80%;
+  height: 38px;
   background-color: rgba(248, 163, 78, 0.785);
   border-radius: 5px;
   border-style: none;
+  font-size: 12px;
 }
 
 #btn {
@@ -310,4 +341,43 @@ footer {
   font-size: 15px;
   text-align: center;
   z-index: 999;
+}
+.video-container {
+  width: 100%;
+  height: 100%;
+  /* padding-bottom: 56.25%;   */
+  position: relative;
+  object-fit: cover;
+  border-bottom-right-radius: 30px;
+}
+
+.video-container video {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.video_main {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+input::placeholder {
+  font-family: helvetica;
+  padding-left: 5px;
+  letter-spacing: 0.2ch;
+  /* font-weight: bold; */
+  opacity: 0.8;
+  color: #ffffff;
+}
+
+input {
+  font-family: helvetica;
+  font-weight: bold;
+  padding-left: 5px;
+  letter-spacing: 0.1ch;
+  color: black;
 }

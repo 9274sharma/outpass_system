@@ -30,6 +30,7 @@ if (mysqli_num_rows($result) > 0) {
     <td>status</td>
     <td>reason</td>
 
+
   </tr>
 <?php
 $i=0;
@@ -48,6 +49,7 @@ while($row = mysqli_fetch_array($result)) {
     <td><?php echo $row["place"]; ?></td>
     <td><?php echo $row["status"]; ?></td>
     <td><?php echo $row["reason"]; ?></td>
+
 
 
 </tr>

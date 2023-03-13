@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 29, 2023 at 08:58 AM
--- Server version: 10.4.24-MariaDB
--- PHP Version: 8.1.6
+-- Generation Time: Feb 11, 2022 at 04:40 PM
+-- Server version: 10.4.13-MariaDB
+-- PHP Version: 7.4.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -30,7 +30,6 @@ SET time_zone = "+00:00";
 CREATE TABLE `backup` (
   `name` varchar(25) NOT NULL,
   `rollno` int(10) NOT NULL,
-  `block` varchar(50) NOT NULL,
   `roomno` int(10) NOT NULL,
   `outpasstype` varchar(50) NOT NULL,
   `outdate` varchar(50) NOT NULL,
@@ -38,21 +37,19 @@ CREATE TABLE `backup` (
   `outtime` varchar(50) NOT NULL,
   `intime` varchar(50) NOT NULL,
   `place` varchar(50) NOT NULL,
-  `status` varchar(50) NOT NULL,
-  `reason` varchar(100) NOT NULL
+  `status` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `backup`
 --
 
-INSERT INTO `backup` (`name`, `rollno`, `block`, `roomno`, `outpasstype`, `outdate`, `indate`, `outtime`, `intime`, `place`, `status`, `reason`) VALUES
-('yash sharma', 209303293, 'B5', 123, 'hometown', '2022-12-14', '2022-12-27', '05:06', '06:07', 'zs', 'accepted', ''),
-('yash sharma', 209303293, 'B5', 123, 'hometown', '2022-12-14', '2022-12-27', '05:06', '06:07', 'zs', 'declined', ''),
-('yash sharma', 209303293, 'B5', 123, 'hometown', '2022-12-14', '2022-12-27', '05:06', '06:07', 'zs', 'declined', ''),
-('yash sharma', 209303293, 'B5', 123, 'hometown', '2022-12-14', '2022-12-27', '05:06', '06:07', 'zs', 'declined', ''),
-('yash sharma', 209303293, 'B1', 123, 'hometown', '2022-12-30', '2022-12-31', '01:37', '02:39', 'xcv', 'declined', ''),
-('yash sharma', 209303293, 'B1', 123, 'hometown', '2022-12-30', '2022-12-31', '01:37', '02:39', 'xcv', 'accepted', '');
+INSERT INTO `backup` (`name`, `rollno`, `roomno`, `outpasstype`, `outdate`, `indate`, `outtime`, `intime`, `place`, `status`) VALUES
+('SREC1901013', 1901013, 325, 'on', '2022-02-10', '2022-02-09', '20:50', '21:50', 'f5tgtg', 'accepted'),
+('SREC1901013145', 1901013, 325, 'on', '2022-02-10', '2022-02-09', '20:50', '21:50', 'f5tgtg', 'accepted'),
+('SREC1901013145', 1901053, 325, 'on', '2022-02-10', '2022-02-09', '20:50', '21:50', 'f5tgtg', 'declined'),
+('SREC1901013145', 1901053, 325, 'on', '2022-02-10', '2022-02-09', '20:50', '21:50', 'f5tgtg', 'accepted'),
+('SREC1901013145tgtg', 1901053, 325, 'on', '2022-02-10', '2022-02-09', '20:50', '21:50', 'f5tgtg', 'declined');
 
 -- --------------------------------------------------------
 
@@ -76,8 +73,7 @@ CREATE TABLE `login` (
 --
 
 INSERT INTO `login` (`username`, `password`, `name`, `roomno`, `htutor`, `ctutor`, `ac`, `hod`) VALUES
-(209303293, 1234, 'Yash Sharma', 101, 'aman', 'alkhil', 'ajay', 'vijay dhaka'),
-(209303193, 1234, 'vansh sharma', 214, 'aman', 'akhil', 'ajay', 'vijay dhaka');
+(1901013, 123, 'Annar', 325, 'Jaswanth', 'Harsshanth', 'Geetha', 'JHG');
 
 -- --------------------------------------------------------
 
@@ -88,7 +84,6 @@ INSERT INTO `login` (`username`, `password`, `name`, `roomno`, `htutor`, `ctutor
 CREATE TABLE `requestform` (
   `name` varchar(25) NOT NULL,
   `rollno` int(10) NOT NULL,
-  `block` varchar(50) NOT NULL,
   `roomno` int(10) NOT NULL,
   `outpasstype` varchar(50) NOT NULL,
   `outdate` varchar(50) NOT NULL,
@@ -98,14 +93,6 @@ CREATE TABLE `requestform` (
   `place` varchar(50) NOT NULL,
   `status` varchar(25) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `requestform`
---
-
-INSERT INTO `requestform` (`name`, `rollno`, `block`, `roomno`, `outpasstype`, `outdate`, `indate`, `outtime`, `intime`, `place`, `status`) VALUES
-('yash sharma', 123, 'B1', 123, 'hometown', '2022-12-23', '2022-12-27', '15:40', '19:40', 'jaipur', 'accepted'),
-('yash sharma', 123, 'B1', 123, 'hometown', '2022-12-23', '2022-12-27', '15:40', '19:40', 'jaipur', 'accepted');
 
 -- --------------------------------------------------------
 
@@ -122,17 +109,7 @@ CREATE TABLE `security` (
 --
 
 INSERT INTO `security` (`rollno`) VALUES
-(1901013),
-(123),
-(123),
-(209303293),
-(209303293),
-(123),
-(123),
-(123),
-(123),
-(123),
-(123);
+(1901013);
 
 -- --------------------------------------------------------
 
