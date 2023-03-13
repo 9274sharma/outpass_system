@@ -1,26 +1,39 @@
 <?php
-include_once 'connectrform.php';
+// Include the file with the database connection details
+require_once 'connectrform.php';
+
+// Check if the form has been submitted
 if(isset($_POST['Request']))
 {    
-     $name = $_POST['name'];
-     $rollno = $_POST['rollno'];
-     $block = $_POST['block'];
-     $roomno = $_POST['roomno'];
-     $outpasstype= $_POST['outpasstype'];
-     $outdate= $_POST['odate'];
-     $indate= $_POST['idate'];
-     $outtime= $_POST['otime'];
-     $intime= $_POST['itime'];
-     $place= $_POST['place'];
-     $sql = "INSERT INTO requestform(name,rollno,block,roomno,outpasstype,outdate,indate,outtime,intime,place)
-     VALUES ('$name', '$rollno', '$block', '$roomno', '$outpasstype', '$outdate', '$indate', '$outtime',  '$intime', '$place')";
-     if (mysqli_query($conn, $sql)) {
-        echo "successful";
+     // Sanitize the user inputs to prevent SQL injection attacks
+     $name = mysqli_real_escape_string($conn, $_POST['name']);
+     $rollno = mysqli_real_escape_string($conn, $_POST['rollno']);
+     $block = mysqli_real_escape_string($conn, $_POST['block']);
+     $roomno = mysqli_real_escape_string($conn, $_POST['roomno']);
+     $outpasstype = mysqli_real_escape_string($conn, $_POST['outpasstype']);
+     $outdate = mysqli_real_escape_string($conn, $_POST['odate']);
+     $indate = mysqli_real_escape_string($conn, $_POST['idate']);
+     $outtime = mysqli_real_escape_string($conn, $_POST['otime']);
+     $intime = mysqli_real_escape_string($conn, $_POST['itime']);
+     $place = mysqli_real_escape_string($conn, $_POST['place']);
 
+     // Prepare the SQL query with placeholders for the values
+     $sql = "INSERT INTO requestform(name,rollno,block,roomno,outpasstype,outdate,indate,outtime,intime,place)
+             VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+     
+     // Use a prepared statement to execute the query with the sanitized values
+     $stmt = mysqli_prepare($conn, $sql);
+     mysqli_stmt_bind_param($stmt, "ssssssssss", $name, $rollno, $block, $roomno, $outpasstype, $outdate, $indate, $outtime, $intime, $place);
+     
+     // Execute the query and check for errors
+     if (mysqli_stmt_execute($stmt)) {
+        echo "Request submitted successfully!";
      } else {
-        echo "Error: " . $sql . "
-" . mysqli_error($conn);
+        echo "Error: " . mysqli_error($conn);
      }
+     
+     // Close the prepared statement and the database connection
+     mysqli_stmt_close($stmt);
      mysqli_close($conn);
 }
 ?>

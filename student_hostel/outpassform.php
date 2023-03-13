@@ -13,26 +13,26 @@
 	<form action="insert2.php" method="post">
 		<table>
 		<tr>
-			<td>
+			<td class="colh col1">
 				Name:
 			</td>
-			<td>
+			<td class="coli col2">
 				<input type="text" name="name" required>
 			</td>
 		</tr>
 		<tr>
-			<td>
+			<td class="colh col1">
 				Registration Number:
 			</td>
-			<td>
+			<td class="coli col2">
 				<input type="integer" name="rollno" required>
 			</td>
 		</tr>
 		<tr>
-			<td>
+			<td class="colh col1">
 				Block:
 			</td>
-			<td>
+			<td class="coli col2">
 				<select name="block" id="block">
 					<option value="B1">B1</option>
 					<option value="B2">B2</option>
@@ -45,39 +45,41 @@
 			</td>
 		</tr>
 		<tr>
-			<td>
+			<td class="colh col1">
 				Room no:
 			</td>
-			<td>
+			<td class="coli col2">
 				<input type="integer" name="roomno" required>
 			</td>
 		</tr>
 		<tr>
-			<td>
+			<td class="colh col1">
 				Outpass type :
 			</td>
-			<td>
-				<input type="radio" name="outpasstype" value="hometown" required>Home town &nbsp&nbsp
-				<input type="radio" name="outpasstype" value="od" required>ON Duty &nbsp&nbsp
-				<input type="radio" name="outpasstype" valeu="localouting" required>Local Outing &nbsp&nbsp
-				<input type="radio" name="outpasstype" valeu="Other" required>Other
+			<td colspan="3" class="coli col2 optionwrk">
+				<input type="radio" name="outpasstype" value="hometown" required> Home town &nbsp&nbsp
+				<input type="radio" name="outpasstype" value="od" required> ON Duty &nbsp&nbsp
+				<input type="radio" name="outpasstype" value="localouting" required> Local Outing &nbsp&nbsp
+				<input type="radio" name="outpasstype" value="Other" required> Other
 			</td>
 		</tr>
 		<tr>
-			<td>Out date:</td>
-			<td><input type="date" name="odate" required></td>
-			<td>In date:</td>
-			<td><input type="date" name="idate" required></td>
+			<td class="colh col1">Out date:</td>
+			<td class="coli col2"><input type="date" name="odate" required></td>
+			<td class="colh col3">In date:</td>
+			<td class="coli col4"><input type="date" name="idate" required></td>
 		</tr>
 		<tr>
-			<td>Out time:</td>
-			<td><input type="time" name="otime" required></td>
-			<td>In time:</td>
-			<td><input type="time" name="itime" required></td>
+			<td class="colh col1">Out time:</td>
+			<td class="coli col2"><input type="time" name="otime" required></td>
+			 
+			<td class="colh col3">In time:</td>
+			<td class="coli col4"><input type="time" name="itime" required></td>
+ 
 		</tr>
 		<tr>
-			<td>place:</td>
-			<td><input type="text" name="place" required>
+			<td class="colh col1">place:</td>
+			<td class="coli col2"><input type="text" name="place" required>
 				
 			
 		</tr colspan="4">

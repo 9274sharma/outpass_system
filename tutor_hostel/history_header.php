@@ -9,7 +9,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-	    <link rel = "stylesheet" type = "text/css" href = "headerstyle.css">
+	    <link rel = "stylesheet" type = "text/css" href = "./headerstyle.css">
 </head>
 <body>
 	<!-- <div class="header">

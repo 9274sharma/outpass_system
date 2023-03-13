@@ -18,7 +18,6 @@
             header("Location: retrive.php"); 
         }  
         else{  
-            session_destroy();
            header("Location: index.html");
         }     
 ?>

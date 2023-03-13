@@ -259,7 +259,7 @@ a:hover {
     margin-left: -40px;
     padding-left: 50px;
     transition: transform 0.5s ease-in-out;
-    box-shadow: 5px 0px 10px 0px #aaa;
+    box-shadow: 5px 0px 10px 0px #a56a49;
     background: linear-gradient(135deg, #ffb100, #ff4700);
   }
 
