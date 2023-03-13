@@ -1,0 +1,112 @@
+body {
+  /* background-image: url(GHS.mp4); */
+  font-family: "Poppins", sans-serif;
+  background-color: rgb(208, 208, 208);
+  /* background-image: url(./bg.png); */
+}
+
+.mainy {
+  padding: 3% 3% 3% 3%;
+  /*   padding-top: px; */
+  margin-left: 20px;
+  margin-right: 20px;
+  /* background-color: rgba(255, 158, 30, 0.5); */
+  /* background: rgb(245, 150, 15);
+  background: linear-gradient(
+    310deg,
+    rgba(245, 150, 15, 1) 0%,
+    rgba(230, 145, 16, 0.9697128851540616) 35%,
+    rgba(255, 235, 0, 0.7372198879551821) 100%
+  ); */
+  /* background-color: rgba(255, 255, 255, 0.733); */
+  /* background: rgba(255, 157, 0, 0.8); */
+  background: rgb(241, 224, 153);
+  background: linear-gradient(
+    180deg,
+    rgba(241, 224, 153, 1) 0%,
+    rgba(255, 149, 0, 1) 100%
+  );
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  /* backdrop-filter: blur(5.5px);
+  -webkit-backdrop-filter: blur(5.5px); */
+  border-radius: 10px;
+  /* border: 1px solid rgba(255, 255, 255, 0.18); */
+}
+
+td {
+  padding: 13px;
+}
+
+input {
+  border-style: none;
+  border-radius: 5px;
+  padding: 2%;
+  background-color: #f5f5f5;
+  color: #242424;
+  outline: none;
+  line-height: 1.15;
+  box-shadow: 0px 10px 20px -18px;
+}
+
+input:focus {
+  border-bottom: 3px solid #1173a8;
+  border-radius: ypx 4px 2px 2px;
+}
+
+.btnn {
+  margin-top: 50px;
+  margin-left: 250%;
+  align-content: center;
+  border-radius: 10px;
+  padding: 10px;
+}
+.btnn:hover {
+  opacity: 1;
+}
+.message {
+  color: white;
+  font-size: 15px;
+  padding: 10px 30px;
+  background-color: #ffa200;
+  cursor: pointer;
+  box-shadow: 1px 3px #b47500;
+}
+
+.message:active {
+  position: relative;
+  top: 7px;
+  box-shadow: none;
+}
+
+select {
+  border-style: none;
+  padding: 3px;
+  border-radius: 5px;
+}
+
+.colh {
+  width: 13%;
+}
+
+.coli {
+  width: 25%;
+}
+
+.col2 {
+  margin-left: 2px;
+}
+
+.col3 {
+  /* position: relative; */
+  /* right: -14%; */
+  width: 9%;
+}
+
+.col4 {
+  margin-left: 20%;
+}
+
+input[type="date"] {
+  /* background-color: #b47500; */
+  /* color: #1173a8; */
+}
