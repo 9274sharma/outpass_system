@@ -36,7 +36,7 @@ tr:nth-child(even) {
     rgba(255, 149, 0, 1) 100%
   );
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
- }
+}
 
 .close {
   position: fixed;
@@ -50,7 +50,7 @@ tr:nth-child(even) {
   display: flex;
   justify-content: center;
   align-items: center;
- }
+}
 
 .fa-xmark {
   display: flex;
@@ -68,14 +68,11 @@ tr:nth-child(even) {
   box-shadow: inset -2px -3px 15px #c5c5c5, inset 3px 4px 12px #ffffff;
   transition: 0.3s;
 }
-}
-}
 
 #reasonInput:focus {
   outline-color: #e8e8e8;
   background: #e8e8e8;
-  box-shadow: inset 20px 20px 60px #c5c5c5,
-     inset -20px -20px 60px #ffffff;
+  box-shadow: inset 20px 20px 60px #c5c5c5, inset -20px -20px 60px #ffffff;
   transition: 0.3s;
 }
 
@@ -88,27 +85,45 @@ tr:nth-child(even) {
   font-size: 17px;
   padding: 2px;
   border: transparent;
-  box-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
   background: #ffbd41;
   color: white;
   border-radius: 10px;
-
 }
 
-.submit:hover{
-  background: rgb(2,0,36);
-  background: linear-gradient(90deg, rgb(247, 170, 4) 0%, rgb(236, 208, 87) 100%);
+.submit:hover {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgb(247, 170, 4) 0%,
+    rgb(236, 208, 87) 100%
+  );
 }
 
-textarea{
+textarea {
   resize: none;
 }
- 
-.myModal{
+
+.myModal {
   background: rgb(0 0 0 / 49%);
   height: 100%;
   width: 100%;
   margin-top: 0;
-   position: fixed;
-  top: 0px;  
+  position: fixed;
+  top: 0px;
+}
+
+.acceptbtn,
+.declinebtn {
+  cursor: pointer;
+  text-decoration: none;
+  color: rgb(255, 132, 0);
+}
+
+.acceptbtn:hover {
+  color: rgb(82, 153, 34);
+}
+
+.declinebtn:hover {
+  color: rgb(235, 36, 36);
 }
