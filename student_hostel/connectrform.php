@@ -1,6 +1,6 @@
 <?php
     $servername='localhost';
-    $username='root';
+     $username='root';
     $password='';
     $dbname = "srec_hostel";
     $conn=mysqli_connect($servername,$username,$password,$dbname);

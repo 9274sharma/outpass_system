@@ -67,7 +67,7 @@ input:focus {
   color: white;
   font-size: 15px;
   padding: 10px 30px;
-  background-color: #ffa200;
+  background-color: #fac66b;
   cursor: pointer;
   box-shadow: 1px 3px #b47500;
 }
@@ -76,6 +76,11 @@ input:focus {
   position: relative;
   top: 7px;
   box-shadow: none;
+}
+
+.message:focus {
+  background-color: #ff8000;
+  border-bottom: 3px solid #b47500;
 }
 
 select {
@@ -104,9 +109,4 @@ select {
 
 .col4 {
   margin-left: 20%;
-}
-
-input[type="date"] {
-  /* background-color: #b47500; */
-  /* color: #1173a8; */
 }
