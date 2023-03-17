@@ -43,8 +43,8 @@ $result = mysqli_query($conn,"SELECT * FROM requestform");
                             <td><?php echo $row['intime']; ?></td>
                             <td><?php echo $row['place']; ?></td>
                             <td>
-                                <a href="accept.php?rollno=<?php echo $row['rollno']; ?>">Accept</a> | 
-                                <a onclick="showDeclineReason('<?php echo $row['rollno']; ?>')">Decline</a>
+                                <a class="acceptbtn" href="accept.php?rollno=<?php echo $row['rollno']; ?>">Accept</a> | 
+                                <a class="declinebtn" onclick="showDeclineReason('<?php echo $row['rollno']; ?>')">Decline</a>
                             </td>
                         </tr>
                     <?php } ?>

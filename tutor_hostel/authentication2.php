@@ -1,24 +1,24 @@
-<?php      
-    include('connection.php');  
-     
-    $rollno = $_POST['rollno'];  
-      
+<?php       
+    include('connection.php');
 
-        $check = stripcslashes($rollno);  
- 
-        $check = mysqli_real_escape_string($con, $rollno);  
-      
-        $sql = "select *from security where  rollno = '$rollno'";  
-        $result = mysqli_query($con, $sql);  
+$rollno = $_POST['rollno'];
+$rollno = filter_var($rollno, FILTER_SANITIZE_STRING);
 
-        $count = mysqli_num_rows($result);  
-          
-        if($count == 1){  
-            echo "<h1><center> Permitted </center></h1>";  
-            $sql = "delete from security where  rollno = '$rollno'";  
-            $result = mysqli_query($con, $sql);  
-        }  
-        else{  
-            echo "<h1> Not permitted.</h1>";  
-        }     
+$sql = "SELECT * FROM security WHERE rollno = ?";
+$stmt = mysqli_prepare($con, $sql);
+mysqli_stmt_bind_param($stmt, "s", $rollno);
+mysqli_stmt_execute($stmt);
+$result = mysqli_stmt_get_result($stmt);
+
+$count = mysqli_num_rows($result);
+
+if ($count == 1) {
+    echo "<h1><center> Permitted </center></h1>";
+    $sql = "DELETE FROM security WHERE rollno = ?";
+    $stmt = mysqli_prepare($con, $sql);
+    mysqli_stmt_bind_param($stmt, "s", $rollno);
+    mysqli_stmt_execute($stmt);
+} else {
+    echo "<h1> Not permitted.</h1>";
+}   
 ?>
