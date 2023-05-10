@@ -19,8 +19,13 @@ MySQL
 # How to Run the Application
 To run the Outpass System for College Hostel, follow these steps:
 -Clone the project repository from GitHub
+
 -Set up a web server with PHP and MySQL
+
 -Import the provided SQL file to create the necessary database tables
+
 -Configure the database connection settings in the project files
+
 -Upload the project files to the web server
+
 -Access the application through a web browser
