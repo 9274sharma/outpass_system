@@ -19,15 +19,15 @@ MySQL
 # How to Run the Application
 To run the Outpass System for College Hostel, follow these steps:
 
--Clone the project repository from GitHub
+- Clone the project repository from GitHub
 
 - Start Apache and MySql from XAMPP Control Panel
  
--Set up a web server with myPhpAdmin
+- Set up a web server with myPhpAdmin
 
--Import the provided SQL file to create the necessary database tables
+- Import the provided SQL file to create the necessary database tables
 
--Configure the database connection settings in the project files
+- Configure the database connection settings in the project files
 
--Enter "http://localhost/outpass/" to access the application through a Web Browser
+- Enter "http://localhost/outpass/" to access the application through a Web Browser
  
