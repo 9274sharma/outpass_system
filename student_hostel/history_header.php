@@ -28,7 +28,7 @@
     <ul class="menu-items">
      <li><a href="outpassform.php">Home</a></li>
      <li><a class="active" href="history.php">History</a></li>
-     <li><a href="#">About</a></li>
+     <li><a href="https://jaipur.manipal.edu/muj/life-at-muj/hostel-facility.html">About</a></li>
      <li><a href="#">Cab Booking</a></li>
      <li><a href="https://jaipur.manipal.edu/content/dam/manipal/muj/documents/academicrules/AC%20Calendar%2022-23.pdf" target="new">Academic Calander</a></li>
      <li><a href="index.html">Logout</a></li>

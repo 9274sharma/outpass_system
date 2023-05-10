@@ -34,7 +34,7 @@
     <ul class="menu-items">
      <li class="anc"><a class="an" href="retrive.php">Home</a></li>
      <li class="anc"><a class="an" class="active" href="history.php">History</a></li>
-     <li class="anc"><a class="an" href="#">About</a></li>
+     <li class="anc"><a class="an" href="https://jaipur.manipal.edu/muj/life-at-muj/hostel-facility.html">About</a></li>
      <!-- <li class="anc"><a class="an" href="#">Cab Booking</a></li> -->
      <li class="anc"><a class="an" href="https://jaipur.manipal.edu/content/dam/manipal/muj/documents/academicrules/AC%20Calendar%2022-23.pdf" target="new">Academic Calander</a></li>
      <li class="anc"><a class="an" href="index.html">Logout</a></li>

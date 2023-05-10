@@ -1,7 +1,7 @@
 <?php      
     $host = "localhost";  
     $user = "root";  
-    $password = '';  
+    $password = 'Sharma98710';  
     $db_name = "srec_hostel";  
       
     $con = mysqli_connect($host, $user, $password, $db_name);  
